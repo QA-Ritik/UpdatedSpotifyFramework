@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 
 
 @Epic("Spotify Playlist collection API")
-public class PlayListTests {
+public class PlayListTests extends ThreadPrinter {
 
     @Story("Create a new list")
     @Description("Test description...")

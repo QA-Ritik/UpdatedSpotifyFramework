@@ -15,7 +15,7 @@ public class SpecBuilder {
     public static RequestSpecification getRequestSpec(){
 
         return new RequestSpecBuilder().
-                setBaseUri("https://api.spotify.com").
+                setBaseUri(System.getProperty("BASE_URI")).
                 setBasePath(BASE_PATH).
                 setContentType(ContentType.JSON).
                 addFilter(new AllureRestAssured()).
@@ -26,7 +26,7 @@ public class SpecBuilder {
     public static RequestSpecification getAccountPostRequestSpec(){
 
         return new RequestSpecBuilder().
-                setBaseUri("https://accounts.spotify.com").
+                setBaseUri(System.getProperty("ACCOUNT_BASE_URI")).
                 setContentType(ContentType.URLENC).
                 addHeader("Authorization","Basic MDVjOTczZGE4MDgyNDk3NzlmY2I0NzM0ODIyYWMwYzM6YjcxODBjYTQ3MGY5NDk4MmI4MzhlNDkwOTZjZDA5OGE=").
                 addFilter(new AllureRestAssured()).
